@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+
+  <link href='https://fonts.googleapis.com/css?family=Oswald:300' rel='stylesheet' type='text/css'>
+
+  <style type="text/css">
+
+  body {
+    font-family: 'Oswald', sans-serif;
+  }
+    #intro {
+      font-size: 18px;
+      background-color: #5B486F;
+      color: #fff;
+      padding: 40px;
+      text-align: center;
+    }
+
+
+  #details {
+      font-size: 15px;
+      padding-top: 40px;
+    }
+
+    .keyword {
+      font-size: 30px;
+      font-style: italic;
+
+    }
+
+  </style>
+  <!-- Latest compiled and minified JS -->
+  <script src="//code.jquery.com/jquery.js"></script>
+ 
+</head>
+<body>
+
+<div id="intro">
+  We have some fancy infographics to show you. we research this stuff day and night.<br>
+  Tell us what you want to know about - shu wahdo siri shater, nehna kamen <br>
+  just say the topic, ours include:
+  <div class="keyword">women, oil, uprising, poetry</div> <br>
+  or you can simply say a country name, we work in: <br>
+  <div class="keyword">lebanon, syria, jordan, egypt.</div> <br>
+</div>
+
+<div id="details">
+
+</div>
+<script src="annyang.js"></script>
+<script>
+ 
+
+if (annyang) {
+ 
+  // Let's define our first command. First the text we expect, and then the function it should call
+  var commands = {
+    'women': function() {
+      $('#details').html("show here some statistics about women and images");
+      $('#details').append('<img src="images/women.jpg" />');
+    },
+    'oil': function() {
+      $('#details').html("oil is evilllll <br>");
+      $('#details').append('<img src="images/oil.jpg" />');
+    },
+    'uprising': function() {
+      $('#details').html("THAWRA <br>");
+      $('#details').append('<img src="images/uprising.jpg" />');
+    },
+    'poetry': function() {
+      $('#details').html("el sentimental geek <br>");
+      $('#details').append('<img src="images/code.jpg" />');
+    },
+    'lebanon': function() {
+      $('#details').html("sorna mkab <br>");
+      $('#details').append('<img src="images/lebanon.jpg" />');
+    },
+    'egypt': function() {
+      $('#details').html("eih el infographic dah<br>");
+      $('#details').append('<img src="images/egypt.jpg" />');
+    },
+    'jordan': function() {
+      $('#details').html("mush michael jordan <br>");
+      $('#details').append('<img src="images/jordan.jpg" />');
+    },
+    'syria': function() {
+      $('#details').html("*sigh*<br>");
+      $('#details').append('<img src="images/syria.jpg" />');
+    }
+
+
+
+  };
+
+  // Add our commands to annyang
+  annyang.addCommands(commands);
+
+  // Start listening. You can call this here, or attach this call to an event, button, etc.
+  annyang.start();
+}
+</script>
+
+</body>
+</html>
